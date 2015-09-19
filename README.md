@@ -97,7 +97,5 @@ the superuser you created earlier (in case you don't see an error page here).
 
 ## The Project
 
-We use less for precompiling css. The less file you will find in 
-`scheduler/static/bootstrap/less/project.less` To make this work you can just 
-initialize the folder with "npm install -g" and then let grunt watch for 
-changes.
+We use sass for styling. Please make sure there is sass in system path.
+To install please look here http://sass-lang.com/install

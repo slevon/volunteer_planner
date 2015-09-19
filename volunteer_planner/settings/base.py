@@ -53,7 +53,8 @@ LOCAL_APPS = (
     'notifications',
     'ckeditor',
     'shiftmailer',
-    'stats'
+    'stats',
+    'compressor'
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
@@ -96,6 +97,11 @@ TEMPLATES = [
         },
     },
 ]
+STATICFILES_FINDERS = (
+       'django.contrib.staticfiles.finders.FileSystemFinder',
+   'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
 
 LOGGING = {
     'version': 1,
@@ -145,3 +151,8 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 DATE_FORMAT = "l, d.m.Y"
+
+SASS_COMMAND = 'sass --scss {infile} {outfile}'
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', SASS_COMMAND),
+)

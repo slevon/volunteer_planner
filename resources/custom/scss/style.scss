@@ -1,17 +1,12 @@
-/**************************
- *  BEGIN sticky footer
- *  see http://getbootstrap.com/examples/sticky-footer-navbar/
- */
-
 html {
     position: relative;
     min-height: 100%;
 }
 
-body {
+.vp-backend {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-}
+
 
 .footer {
     position: absolute;
@@ -91,3 +86,5 @@ code {
     text-align: left;
     width: 15%;
 }
+}
+

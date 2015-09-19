@@ -1,32 +1,7 @@
-{% load cache humanize number_registrations %}
-<!DOCTYPE html>
-<html>
-<head lang="de">
-    <meta charset="UTF-8">
+{% extends "base.html" %}
+{% load cache humanize number_registrations compress  %}
+{% block body_class %}home{% endblock %}
 
-    <title>{% block title %} Volunteer Planner {% endblock %}</title>
-
-    <link href="/static/bootstrap/dist/css/bootstrap.css?" rel="stylesheet"
-          type="text/css">
-
-    <meta name="description" property="og:description"
-          content="Volunteer-Planner.org ist ein kostenloses und werbungsfreies Tool, um Dienstpläne für Freiwillige in Flüchtlingsunterkünfte zu organisieren">
-    <meta property="og:image"
-          content="https://volunteer-planner.org/static/img/bg2.jpg"/>
-
-    {% include 'google_headers.html' %}
-
-    <link href='//fonts.googleapis.com/css?family=Hind|Shadows+Into+Light'
-          rel='stylesheet' type='text/css'>
-</head>
-<body class="{% block body_class %} {% endblock %}">
-
-{% block navbar %}
-{% endblock %}
-
-<div id="text-outer-container">
-
-    <div id="content">
         {% block content %}
             {% include "partials/alert_messages.html" %}
             <div class="col-md-1"></div>
@@ -93,15 +68,3 @@
                 </p>
             </div>
         {% endblock %}
-    </div>
-</div>
-{% block js %}
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"
-            type="text/javascript"></script>
-    <script src="/static/bootstrap/dist/js/bootstrap.min.js"
-            type="text/javascript"></script>
-{% endblock %}
-{% block additional_js %}
-{% endblock %}
-</body>
-</html>

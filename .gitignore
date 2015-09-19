@@ -10,3 +10,5 @@ db.sqlite3
 .DS_Store
 *.mo
 *.log
+.sass-cache
+static/CACHE/
