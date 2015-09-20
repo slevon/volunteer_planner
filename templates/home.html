@@ -3,27 +3,26 @@
 {% block body_class %}home{% endblock %}
 
 
-        {% block content %}
-            {% include "partials/alert_messages.html" %}
+{% block content %}
+    {% include "partials/alert_messages.html" %}
 
 
 
 
-                <a href="{% url 'auth_login' %}">
-                    <button type="button"
-                            class="btn btn-primary transparent btn-lg active">
-                        Login
-                    </button>
-                </a>
-                <br>
-                <a href="{% url 'faq' %}">
-                    <button type="button"
-                            class="btn btn-primary transparent btn-lg active">
-                        Häufig gestellte Fragen
-                    </button>
-                </a>
-            </div>
->>>>>>> 47d7b0ba6d2f522210fa50e9bae4902cbaaa5da5
+    <a href="{% url 'auth_login' %}">
+        <button type="button"
+                class="btn btn-primary transparent btn-lg active">
+            Login
+        </button>
+    </a>
+    <br>
+    <a href="{% url 'faq' %}">
+        <button type="button"
+                class="btn btn-primary transparent btn-lg active">
+            Häufig gestellte Fragen
+        </button>
+    </a>
+    </div>
 
     <div class="col-md-3" style="padding-left: 60px;">
 
