@@ -1,90 +1,131 @@
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
+  color: $base-font-color;
 }
 
-.vp-backend {
+/*
+
+Navbar
+
+*/
+
+.navbar{
+  height:100px;
+  background-color: rgba(255,255,255,0.9);
+}
+
+#primary-cta {
+  padding: 30px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  a {
+    border: 2px solid #338eff;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 36px;
+    margin: 0 0 0 10px;
+    padding: 0 15px;
+    text-decoration: none;
+  }
+}
+
+
+
+
+body {
+    margin-top:100px;
+  /*
+
+  Backend VP Logged in user volunteer
+
+  */
+
+  &.vp-backend {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
 
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    background-color: #f5f5f5;
-}
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      background-color: #f5f5f5;
+    }
 
-/*    END sticky footer
- **************************/
+    /*    END sticky footer
+     **************************/
 
-body > .container {
-    padding: 60px 15px 0;
-}
+    body > .container {
+      padding: 60px 15px 0;
+    }
 
-.container .text-muted {
-    margin: 20px 0;
-}
+    .container .text-muted {
+      margin: 20px 0;
+    }
 
-.footer > .container {
-    padding-right: 15px;
-    padding-left: 15px;
-}
+    .footer > .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
 
-code {
-    font-size: 80%;
-}
+    code {
+      font-size: 80%;
+    }
 
+    .label-0 {
+      background-color: #777;
+    }
+    .label-0[href]:hover,
+    .label-0[href]:focus {
+      background-color: #5e5e5e;
+    }
+    .label-5 {
+      background-color: #337ab7;
+    }
+    .label-5[href]:hover,
+    .label-5[href]:focus {
+      background-color: #286090;
+    }
+    .label-4 {
+      background-color: #5cb85c;
+    }
+    .label-4[href]:hover,
+    .label-4[href]:focus {
+      background-color: #449d44;
+    }
+    .label-3 {
+      background-color: #5bc0de;
+    }
+    .label-3[href]:hover,
+    .label-3[href]:focus {
+      background-color: #31b0d5;
+    }
+    .label-warning {
+      background-color: #f0ad4e;
+    }
+    .label-2[href]:hover,
+    .label-2[href]:focus {
+      background-color: #ec971f;
+    }
 
-.label-0 {
-  background-color: #777;
-}
-.label-0[href]:hover,
-.label-0[href]:focus {
-  background-color: #5e5e5e;
-}
-.label-5 {
-  background-color: #337ab7;
-}
-.label-5[href]:hover,
-.label-5[href]:focus {
-  background-color: #286090;
-}
-.label-4 {
-  background-color: #5cb85c;
-}
-.label-4[href]:hover,
-.label-4[href]:focus {
-  background-color: #449d44;
-}
-.label-3 {
-  background-color: #5bc0de;
-}
-.label-3[href]:hover,
-.label-3[href]:focus {
-  background-color: #31b0d5;
-}
-.label-warning {
-  background-color: #f0ad4e;
-}
-.label-2[href]:hover,
-.label-2[href]:focus {
-  background-color: #ec971f;
-}
+    .label-1 {
+      background-color: #d9534f;
+    }
+    .label-1[href]:hover,
+    .label-1[href]:focus {
+      background-color: #c9302c;
+    }
 
-.label-1 {
-  background-color: #d9534f;
-}
-.label-1[href]:hover,
-.label-1[href]:focus {
-  background-color: #c9302c;
-}
-
-.priority_column {
-    text-align: left;
-    width: 15%;
-}
+    .priority_column {
+      text-align: left;
+      width: 15%;
+    }
+  }
 }
 

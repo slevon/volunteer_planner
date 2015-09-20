@@ -2,39 +2,28 @@
 {% load cache humanize number_registrations compress %}
 {% block body_class %}home{% endblock %}
 
-{% block content %}
-    {% include "partials/alert_messages.html" %}
-    <div class="col-md-1"></div>
 
-    <div class="col-md-3 border-right" style="padding-left: 38px;">
-
-        <div class="svg-frame">
-            <svg width="100%" height="120px">
-                <image xlink:href="/static/img/Volunteer_logo.svg"
-                       alt="" width="100%" height="125"/>
-            </svg>
-        </div>
+        {% block content %}
+            {% include "partials/alert_messages.html" %}
 
 
-        <a href="{% url 'registation' %}">
-            <button type="button" class="btn btn-primary btn-lg active">
-                Helfen und Registrieren
-            </button>
-        </a>
-        <a href="{% url 'auth_login' %}">
-            <button type="button"
-                    class="btn btn-primary transparent btn-lg active">
-                Login
-            </button>
-        </a>
-        <br>
-        <a href="{% url 'faq' %}">
-            <button type="button"
-                    class="btn btn-primary transparent btn-lg active">
-                Häufig gestellte Fragen
-            </button>
-        </a>
-    </div>
+
+
+                <a href="{% url 'auth_login' %}">
+                    <button type="button"
+                            class="btn btn-primary transparent btn-lg active">
+                        Login
+                    </button>
+                </a>
+                <br>
+                <a href="{% url 'faq' %}">
+                    <button type="button"
+                            class="btn btn-primary transparent btn-lg active">
+                        Häufig gestellte Fragen
+                    </button>
+                </a>
+            </div>
+>>>>>>> 47d7b0ba6d2f522210fa50e9bae4902cbaaa5da5
 
     <div class="col-md-3" style="padding-left: 60px;">
 

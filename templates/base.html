@@ -16,7 +16,6 @@
     <!-- Bootstrap -->
     {% compress css %}
         <link href="/static/bootstrap/scss/bootstrap.scss" rel="stylesheet" type="text/x-scss">
-        <link href="/static/custom/scss/style.scss" rel="stylesheet" type="text/x-scss">
 
     {% endcompress %}
 
@@ -32,7 +31,7 @@
 
 {% include "partials/navigation_bar.html" %}
 
-<div class="container" role="main">
+<div class="container-fluid" role="main">
     <!-- Begin page content -->
     {% block content %}
 
