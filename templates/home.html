@@ -1,70 +1,70 @@
 {% extends "base.html" %}
-{% load cache humanize number_registrations compress  %}
+{% load cache humanize number_registrations compress %}
 {% block body_class %}home{% endblock %}
 
-        {% block content %}
-            {% include "partials/alert_messages.html" %}
-            <div class="col-md-1"></div>
+{% block content %}
+    {% include "partials/alert_messages.html" %}
+    <div class="col-md-1"></div>
 
-            <div class="col-md-3 border-right" style="padding-left: 38px;">
+    <div class="col-md-3 border-right" style="padding-left: 38px;">
 
-                <div class="svg-frame">
-                    <svg width="100%" height="120px">
-                        <image xlink:href="/static/img/Volunteer_logo.svg"
-                               alt="" width="100%" height="125"/>
-                    </svg>
-                </div>
-
-
-                <a href="{% url 'registation' %}">
-                    <button type="button" class="btn btn-primary btn-lg active">
-                        Helfen und Registrieren
-                    </button>
-                </a>
-                <a href="{% url 'auth_login' %}">
-                    <button type="button"
-                            class="btn btn-primary transparent btn-lg active">
-                        Login
-                    </button>
-                </a>
-                <br>
-                <a href="{% url 'faq' %}">
-                    <button type="button"
-                            class="btn btn-primary transparent btn-lg active">
-                        Häufig gestellte Fragen
-                    </button>
-                </a>
-            </div>
-
-            <div class="col-md-3" style="padding-left: 60px;">
-
-                <h2>Platform zur Organisation von Freiwilligen-Diensten</h2>
-
-                <p>Auf dieser Plattform werden die Freiwilligen-Dienste in
-                    folgenden Einrichtungen koordiniert:</p>
-                <ul>
-                    {% for location in locations %}
-                        <li>{{ location }}, {{ location.city }}</li>
-                    {% endfor %}
-                </ul>
+        <div class="svg-frame">
+            <svg width="100%" height="120px">
+                <image xlink:href="/static/img/Volunteer_logo.svg"
+                       alt="" width="100%" height="125"/>
+            </svg>
+        </div>
 
 
-            </div>
+        <a href="{% url 'registation' %}">
+            <button type="button" class="btn btn-primary btn-lg active">
+                Helfen und Registrieren
+            </button>
+        </a>
+        <a href="{% url 'auth_login' %}">
+            <button type="button"
+                    class="btn btn-primary transparent btn-lg active">
+                Login
+            </button>
+        </a>
+        <br>
+        <a href="{% url 'faq' %}">
+            <button type="button"
+                    class="btn btn-primary transparent btn-lg active">
+                Häufig gestellte Fragen
+            </button>
+        </a>
+    </div>
 
-            <div class="col-md-3">
-                <h2>
-                    {% get_volunteer_number %} Freiwillige sind bereits
-                    registriert
-                    {% if working_hours %}
-                        und haben {{ working_hours.value|intcomma }} Stunden
-                        geholfen
-                    {% endif %}
-                </h2>
-            </div>
-            <div class="disclaimer">
-                <p>
-                    Für Kritik, Anregungen oder Support: <a
-                        href="mailto:support@volunteer-planner.org">support@volunteer-planner.org</a>
-                </p>
-            </div>
-        {% endblock %}
+    <div class="col-md-3" style="padding-left: 60px;">
+
+        <h2>Platform zur Organisation von Freiwilligen-Diensten</h2>
+
+        <p>Auf dieser Plattform werden die Freiwilligen-Dienste in
+            folgenden Einrichtungen koordiniert:</p>
+        <ul>
+            {% for location in locations %}
+                <li>{{ location }}, {{ location.city }}</li>
+            {% endfor %}
+        </ul>
+
+
+    </div>
+
+    <div class="col-md-3">
+        <h2>
+            {% get_volunteer_number %} Freiwillige sind bereits
+            registriert
+            {% if working_hours %}
+                und haben {{ working_hours.value|intcomma }} Stunden
+                geholfen
+            {% endif %}
+        </h2>
+    </div>
+    <div class="disclaimer">
+        <p>
+            Für Kritik, Anregungen oder Support: <a
+                href="mailto:support@volunteer-planner.org">support@volunteer-planner.org</a>
+        </p>
+    </div>
+{% endblock %}
