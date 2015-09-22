@@ -1,4 +1,4 @@
-{% load cache humanize number_registrations %}
+{% load humanize volunteer_stats %}
 <!DOCTYPE html>
 <html>
 <head lang="de">
@@ -77,12 +77,8 @@
 
             <div class="col-md-3">
                 <h2>
-                    {% get_volunteer_number %} Freiwillige sind bereits
-                    registriert
-                    {% if working_hours %}
-                        und haben {{ working_hours.value|intcomma }} Stunden
-                        geholfen
-                    {% endif %}
+                    {% get_volunteer_number %} Freiwillige sind bereits registriert
+                    und haben {% get_volunteer_hours %} Stunden geholfen.
                 </h2>
             </div>
             <div class="disclaimer">
